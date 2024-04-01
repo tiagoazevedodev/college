@@ -1,16 +1,5 @@
 Multiplicação Tradicional Passo a Passo
 
-1 - Percorra todos os digitos do operando1 e a cada digito Percorra todos os digitos do operando2, multiplique o digito atual do operando1,
-    pelo operando2 e se o digito for menor que 10 e não for o ultimo digito do operando2 guarde o resultado na respectiva posição do digito 
-    do operando 2. Se for maior adicione a dezena no proximo resultado.
-
-2 - Ao trocar de digito do operando1, salve os resultados anteriores e multiplique pela respectiva força do digito do operando1,
-    inicie um novo número iniciando com valor vazio.
-
-3 - Ao finalizar todos os digitos do operando1, some todos os resultados encontrados, fim.
-
--------------------------------------------------------------------------------------------------------------------------------------------
-
 1 - Percorra cada dígito do operando1 e, para cada dígito, percorra todos os dígitos do operando2. 
     Multiplique o dígito atual do operando1 pelo operando2.
 
