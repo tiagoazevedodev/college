@@ -1,0 +1,23 @@
+Multiplicação Tradicional Passo a Passo
+
+1 - Percorra todos os digitos do operando1 e a cada digito Percorra todos os digitos do operando2, multiplique o digito atual do operando1,
+    pelo operando2 e se o digito for menor que 10 e não for o ultimo digito do operando2 guarde o resultado na respectiva posição do digito 
+    do operando 2. Se for maior adicione a dezena no proximo resultado.
+
+2 - Ao trocar de digito do operando1, salve os resultados anteriores e multiplique pela respectiva força do digito do operando1,
+    inicie um novo número iniciando com valor vazio.
+
+3 - Ao finalizar todos os digitos do operando1, some todos os resultados encontrados, fim.
+
+-------------------------------------------------------------------------------------------------------------------------------------------
+
+1 - Percorra cada dígito do operando1 e, para cada dígito, percorra todos os dígitos do operando2. 
+    Multiplique o dígito atual do operando1 pelo operando2.
+
+2 - Se o resultado for menor que 10 e não for o último dígito do operando2, 
+    guarde o resultado na posição correspondente do dígito do operando2. Se for maior ou igual a 10, adicione a dezena ao próximo resultado.
+
+3 - Ao trocar de dígito do operando1, some todos os resultados parciais obtidos até o momento, 
+    multiplicando-os pela posição do dígito atual do operando1. Comece um novo número iniciando com valor zero.
+
+4 - Ao finalizar todos os dígitos do operando1, some todos os resultados parciais obtidos para obter o resultado final da multiplicação.
