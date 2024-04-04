@@ -1,44 +1,84 @@
+class Node:
+    def __init__(self, info):
+        self.info = info
+        self.next = None
+
 
 class LinkedList:
     def __init__(self):
-        self.inicio = None
-        self.tamanho = 0
+        self.start = None
+        self.lenght = 0
 
-    def buscar(self, valor):
-        aux = self.inicio
+    def search(self, info):
+        """Retorna o índice do nó que contém o valor passado por parâmetro."""
+        aux = self.start
         cont = 0
 
         while aux is not None:
-            if aux.valor == valor:
+            if aux.info == info:
                 return cont
             cont += 1
-            aux = aux.prox
+            aux = aux.next
 
         return False
 
-    def imprimir(self):
-        aux = self.inicio
-        
+    def print(self):
+        """Retorna todos os itens da lista encadeada separados por ' '."""
+        aux = self.start
+        saida = ""
         while aux is not None:
-            saida += " " + aux.valor
-            aux = aux.prox
+            saida += " " + str(aux.info)
+            aux = aux.next
+        return saida
 
-    def inserir(self, valor):
-        pass
-        
-    def remover(self, valor):
-        pass
-
-    def index(self, valor):
-        aux = self.inicio
-        cont = 0
+    def insert(self, info):
+        """Insere um item no fim da lista encadeada."""
+        self.lenght += 1
+        aux = self.start
+        if aux is None:
+            self.start = Node(info)
+            return True
         while aux is not None:
-            if aux.valor == valor:
-                return cont
+            if aux.next is None:
+                aux.next = Node(info)
+                return True
+            aux = aux.next
+        
+        
+    def delete(self, info):
+        """Deleta o primeiro valor encontrado na lista encadeada."""
+        aux = self.start
+        while aux is not None:
+            if aux.info == info:
+                aux.next = aux.next.next
+                return True
+            aux = aux.next
+        raise ValueError("Value not found")
+
+    
+    def index(self, index):
+        """Retorna o valor do nó do index passado por parâmetro."""
+        if index < 0 or index >= self.lenght:
+            raise IndexError("Index out of range")
+        
+        aux = self.start
+        cont = 0 
+        while aux is not None:
+            if cont == index:
+                return aux.info
             cont += 1
-            aux = aux.prox
-
+            aux = aux.next
 
 minhaLista = LinkedList()
 
-minhaLista.buscar(2)
+minhaLista.insert("A")
+minhaLista.insert("B")
+minhaLista.insert("C")
+minhaLista.insert("Olá")
+minhaLista.insert(7)
+
+
+
+cIndex = minhaLista.index(3)
+
+print(cIndex)
