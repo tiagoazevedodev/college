@@ -68,17 +68,3 @@ class LinkedList:
                 return aux.info
             cont += 1
             aux = aux.next
-
-minhaLista = LinkedList()
-
-minhaLista.insert("A")
-minhaLista.insert("B")
-minhaLista.insert("C")
-minhaLista.insert("Olá")
-minhaLista.insert(7)
-
-
-
-cIndex = minhaLista.index(3)
-
-print(cIndex)

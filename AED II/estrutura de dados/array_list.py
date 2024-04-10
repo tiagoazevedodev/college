@@ -28,5 +28,5 @@ class ArrayList:
 
 
 meuArray = ArrayList(10)
-
 meuArray.imprimir()
+
