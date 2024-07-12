@@ -13,7 +13,6 @@ class LinkedList:
     def insert(self, info, index):
         if index > self.length:
             raise IndexError("Index out of range")
-        
         elif self.start is None:
             self.start = Node(info)
             self.end = self.start
