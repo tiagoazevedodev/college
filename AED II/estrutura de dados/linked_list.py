@@ -2,83 +2,72 @@ class Node:
     def __init__(self, info):
         self.info = info
         self.next = None
-
+        self.previous = None
 
 class LinkedList:
     def __init__(self):
         self.start = None
-        self.lenght = 0
-
-    def search(self, info):
-        """Retorna o índice do nó que contém o valor passado por parâmetro."""
-        aux = self.start
-        cont = 0
-
-        while aux is not None:
-            if aux.info == info:
-                return cont
-            cont += 1
-            aux = aux.next
-
-        return False
-
-    def print(self):
-        """Retorna todos os itens da lista encadeada separados por ' '."""
-        aux = self.start
-        saida = ""
-        while aux is not None:
-            saida += " " + str(aux.info)
-            aux = aux.next
-        return saida
-
-    def insert(self, info):
-        """Insere um item no fim da lista encadeada."""
-        self.lenght += 1
-        aux = self.start
-        if aux is None:
-            self.start = Node(info)
-            return True
-        while aux is not None:
-            if aux.next is None:
-                aux.next = Node(info)
-                return True
-            aux = aux.next
-        
-        
-    def delete(self, info):
-        """Deleta o primeiro valor encontrado na lista encadeada."""
-        aux = self.start
-        while aux is not None:
-            if aux.info == info:
-                aux.next = aux.next.next
-                return True
-            aux = aux.next
-        raise ValueError("Value not found")
-
-    
-    def index(self, index):
-        """Retorna o valor do nó do index passado por parâmetro."""
-        if index < 0 or index >= self.lenght:
+        self.end = None
+        self.length = 0
+            
+    def insert(self, info, index):
+        if index > self.length:
             raise IndexError("Index out of range")
         
-        aux = self.start
-        cont = 0 
-        while aux is not None:
-            if cont == index:
-                return aux.info
-            cont += 1
-            aux = aux.next
+        elif self.start is None:
+            self.start = Node(info)
+            self.end = self.start
+        else:
+            middle = self.end - self.start + 1 
+            if index <= middle:
+                current = self.start
+                for _ in range(index):
+                    current = current.next
+                new_node = Node(info)
+                new_node.next = current.next
+                current.next = new_node
+            else:
+                current = self.end
+                for _ in range(middle, index):
+                    current = current.next
+                new_node = Node(info)
+                new_node.next = current.next
+                current.next = new_node
+                self.end = new_node
+        self.length += 1
+        
+    def remove(self, index):
+        if index >= self.length:
+            raise IndexError("Index out of range")
+        
+        current = self.start
+        if index == 0:
+            self.start = self.start.next
+        else:
+            for _ in range(index - 1):
+                current = current.next
+            current.next = current.next.next
+        self.length -= 1
+    
+    def position(self, info):
+        pass
+    
+    def value(self, index):
+        pass
+    
+    def destroy(self):
+        pass
+    
+    def show(self):
+        string = ""
+        current = self.start
+        while current is not None:
+            string += str(current.info) + ", "
+            current = current.next
+        return string
+    
+lista = LinkedList()
 
-minhaLista = LinkedList()
-
-minhaLista.insert("A")
-minhaLista.insert("B")
-minhaLista.insert("C")
-minhaLista.insert("Olá")
-minhaLista.insert(7)
-
-
-
-cIndex = minhaLista.index(3)
-
-print(cIndex)
+lista.insert(1, 0)
+lista.insert(2, 4)
+print(lista.show())
