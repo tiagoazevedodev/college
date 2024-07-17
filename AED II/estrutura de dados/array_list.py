@@ -7,11 +7,7 @@ class ArrayList:
         self.array = [None] * capacidade
     
     def buscar(self, valor):
-        cont = 0
-        for i in self.array:
-            if i == valor:
-                return cont
-            cont += 1
+        pass
 
     def imprimir(self):
         saida = ""
