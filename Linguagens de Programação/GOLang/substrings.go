@@ -13,10 +13,8 @@ func main() {
     var m string
     fmt.Scanln(&m)
 
-    // Cria uma expressão regular para buscar a palavra 'm' na frase 'n'
     re := regexp.MustCompile(m)
 
-    // Conta o número de ocorrências da palavra na frase
     count := re.FindAllStringIndex(n, -1)
 
     fmt.Println("A palavra", m, "ocorre ", len(count), " vezes na frase.")

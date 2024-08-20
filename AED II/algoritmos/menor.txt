@@ -1,0 +1,6 @@
+function encontrarMenorElemento(array):
+    min = array[0]                      // Custo: (1)
+    for i from 1 to length(array) - 1:  // Custo: ( (n - 1) - 1 + 1 + 1 ) = N
+        if array[i] < min:              // Custo: N - 1
+            min = array[i]              // Custo: (1) por iteração, total O(n)
+    return min                          // Custo: (1)

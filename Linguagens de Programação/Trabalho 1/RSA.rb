@@ -8,8 +8,3 @@ plaintext = "Hello, RSA!"
 encrypted_msg = encrypt(public_key, plaintext)
 puts "Mensagem Criptografada: #{encrypted_msg}"
 
-
-
-
-
-
