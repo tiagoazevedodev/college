@@ -16,8 +16,8 @@ class ArrayList:
                 saida += " " + i
         print(saida)
 
-    def inserir(self, valor):
-        pass
+    def inserir(self, valor, posicao):
+        if 
         
     def remover(self, valor):
         pass

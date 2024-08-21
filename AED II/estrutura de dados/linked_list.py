@@ -68,18 +68,6 @@ class LinkedList:
                 current.next.previous = current.previous
         self.length -= 1
 
-    def index_search_rec(self, node, info, index=0):
-        # Base case: If node is None, the element is not in the list
-        if node is None:
-            return False
-        # If the current node's info matches, return the index
-        if node.info == info:
-            return index
-        # Recursively search in the next node until some base case is reached
-        return self.index_search_rec(node.next, info, index + 1)
-
-    def search(self, info):
-        return self.index_search_rec(self.start, info)
 
     def reverse(self):
         current = self.start
@@ -101,6 +89,20 @@ class LinkedList:
             current = current.next
         return string.rstrip(" -> ")
     
+    def index_search_rec(self, node, info, index=0):
+        # Base case: If node is None, the element is not in the list
+        if node is None:
+            return False
+        # If the current node's info matches, return the index
+        if node.info == info:
+            return index
+        # Recursively search in the next node until some base case is reached
+        return self.index_search_rec(node.next, info, index + 1)
+
+    def search(self, info):
+        return self.index_search_rec(self.start, info)
+        
+
 # Use case
 lista = LinkedList()
 lista.append(0)
@@ -111,5 +113,5 @@ lista.append(4)
 lista.append(10)
 print(lista.show())  
 
-print(lista.search(10))  # Output: 1 (index of element 4)
-print(lista.search(6))  # Output: False (element 6 not found)
+print(lista.search(10))
+print(lista.search(6))
