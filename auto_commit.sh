@@ -7,11 +7,18 @@ REPO_DIR="/home/tw/Desktop/Faculdade"
 COMMIT_MESSAGE="Auto-commit: $(date +'%Y-%m-%d %H:%M:%S')"
 
 # Intervalo entre as verificações (em segundos)
-INTERVALO=180
+INTERVALO=60
 
 # Função para realizar git pull, commit e push
 sync_repo() {
     cd $REPO_DIR
+
+    # Verifica se há mudanças locais não comitadas
+    if [[ -n $(git status -s) ]]; then
+        echo "Mudanças locais detectadas. Fazendo commit e push..."
+        git add .
+        git commit -m "$COMMIT_MESSAGE"
+    fi
 
     # Verifica se há mudanças no repositório remoto
     git fetch
@@ -28,9 +35,7 @@ sync_repo() {
         git pull --rebase
 
     elif [ $REMOTE = $BASE ]; then
-        echo "Mudanças locais detectadas. Fazendo commit e push..."
-        git add .
-        git commit -m "$COMMIT_MESSAGE"
+        echo "Mudanças locais detectadas. Fazendo push..."
         git push
 
     else

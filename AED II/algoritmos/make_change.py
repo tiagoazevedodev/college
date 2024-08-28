@@ -10,4 +10,4 @@ def make_change(value):
                 break
     return used_coins
 
-print(make_change(67))
+print(make_change(77))
