@@ -11,3 +11,4 @@ def make_change(value):
     return used_coins
 
 print(make_change(77))
+print(make_change(777))
