@@ -170,5 +170,8 @@ class HashTable:
     def __init__(self, max) -> None:
         self.keys = [None] * max
         self.values = [None] * max
+        self.max = max
+        self.length = 0
 
-    def 
+
+    def NET
