@@ -165,3 +165,7 @@ class Tabela:
 
 # print(tabela.printarVetor())
 # print(tabela.buscar(None))
+
+class HashTable:
+    def __init__(self) -> None:
+        self.
