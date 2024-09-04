@@ -167,6 +167,7 @@ class Tabela:
 # print(tabela.buscar(None))
 
 class HashTable:
+    """
     def __init__(self, max) -> None:
         self.keys = [None] * max
         self.values = [None] * max
@@ -174,7 +175,25 @@ class HashTable:
         self.length = 0
 
     def insert(self, key, value):
-        
+        if self.length == self.max:
+            return False
+        hash = self.hash(key)
+        while self.keys[hash] != None:
+            hash = (hash + 1) % self.max
+        self.keys[hash] = key
+        self.values[hash] = value
+        self.length += 1
+        return True
+    
+    def search(self, key):
+        hash = self.hash(key)
+        while self.keys[hash] != key:
+            hash = (hash + 1) % self.max
+            if self.keys[hash] == None:
+                return None
+        return self.values[hash]
+    
+
 
     def next_prime(self, n):
         while True:
