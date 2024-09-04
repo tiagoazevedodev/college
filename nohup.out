@@ -1,1 +1,11 @@
 Mudanças locais detectadas. Fazendo commit e push...
+[main 73de56c] Auto-commit: 2024-09-04 13:56:29
+ 2 files changed, 1 insertion(+), 503 deletions(-)
+ create mode 100644 AED II/estrutura de dados/hash_table.py
+ rewrite nohup.out (99%)
+Mudanças locais detectadas. Fazendo push...
+remote: This repository moved. Please use the new location:        
+remote:   https://github.com/tiagoazevedodev/college.git        
+To https://github.com/tiagoazevedodev/Faculdade.git
+   e1cfe68..73de56c  main -> main
+Mudanças locais detectadas. Fazendo commit e push...
