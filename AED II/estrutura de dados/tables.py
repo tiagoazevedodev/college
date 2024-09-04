@@ -167,5 +167,7 @@ class Tabela:
 # print(tabela.buscar(None))
 
 class HashTable:
-    def __init__(self) -> None:
-        self.
+    def __init__(self, max) -> None:
+        
+
+    def 
