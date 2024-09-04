@@ -173,6 +173,8 @@ class HashTable:
         self.max = max
         self.length = 0
 
+    def insert(self, key, value):
+        
 
     def next_prime(self, n):
         while True:
