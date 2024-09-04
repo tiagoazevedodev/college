@@ -157,11 +157,11 @@ class Tabela:
                     self.tamanho += 1
                     
 
-tabela = Tabela(10)
+# tabela = Tabela(10)
 
-tabela.inserir(1, 10)
-tabela.inserir(2, None)
-tabela.inserir(None, 20)
+# tabela.inserir(1, 10)
+# tabela.inserir(2, None)
+# tabela.inserir(None, 20)
 
-print(tabela.printarVetor())
-print(tabela.buscar(None))
+# print(tabela.printarVetor())
+# print(tabela.buscar(None))
