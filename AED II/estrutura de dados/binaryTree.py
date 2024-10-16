@@ -6,4 +6,4 @@ class Node:
         
 class BinaryTree:
     def __init__(self):
-        
+        self.root = None
