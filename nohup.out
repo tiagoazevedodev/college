@@ -242,3 +242,11 @@ remote:   https://github.com/tiagoazevedodev/college.git
 To https://github.com/tiagoazevedodev/Faculdade.git
    d06c832..80d7039  main -> main
 Mudanças locais detectadas. Fazendo commit e push...
+[main 8348bb6] Auto-commit: 2024-10-16 14:41:41
+ 1 file changed, 8 insertions(+)
+Mudanças locais detectadas. Fazendo push...
+remote: This repository moved. Please use the new location:        
+remote:   https://github.com/tiagoazevedodev/college.git        
+To https://github.com/tiagoazevedodev/Faculdade.git
+   80d7039..8348bb6  main -> main
+Mudanças locais detectadas. Fazendo commit e push...
