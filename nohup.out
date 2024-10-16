@@ -105,3 +105,12 @@ To https://github.com/tiagoazevedodev/Faculdade.git
    2d63d23..01f5f46  main -> main
 Repositório já está atualizado.
 Mudanças locais detectadas. Fazendo commit e push...
+[main f4b1f8b] Auto-commit: 2024-10-16 14:41:41
+ 3 files changed, 4 insertions(+), 1 deletion(-)
+ create mode 100644 AED II/estrutura de dados/binaryTree.py
+Mudanças locais detectadas. Fazendo push...
+remote: This repository moved. Please use the new location:        
+remote:   https://github.com/tiagoazevedodev/college.git        
+To https://github.com/tiagoazevedodev/Faculdade.git
+   6a9db47..f4b1f8b  main -> main
+Mudanças locais detectadas. Fazendo commit e push...
