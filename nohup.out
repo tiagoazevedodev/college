@@ -314,3 +314,12 @@ remote:   https://github.com/tiagoazevedodev/college.git
 To https://github.com/tiagoazevedodev/Faculdade.git
    63a6a16..ca9fbf1  main -> main
 Mudanças locais detectadas. Fazendo commit e push...
+[main d5e3c78] Auto-commit: 2024-11-11 13:43:05
+ 2 files changed, 11 insertions(+)
+ create mode 100644 AED II/algoritmos/sorting/radixSort.js
+Mudanças locais detectadas. Fazendo push...
+remote: This repository moved. Please use the new location:        
+remote:   https://github.com/tiagoazevedodev/college.git        
+To https://github.com/tiagoazevedodev/Faculdade.git
+   ca9fbf1..d5e3c78  main -> main
+Mudanças locais detectadas. Fazendo commit e push...

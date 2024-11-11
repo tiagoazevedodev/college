@@ -14,7 +14,7 @@ def bucketSort(array):
             k += 1
     return array
 
-array = [42, 32, 33, 2, 37, 47, 51]
+array = [.42, .32, .33, .2, .37, .47, .51]
 
 print("Sorted Array in descending order is")
 print(bucketSort(array))
