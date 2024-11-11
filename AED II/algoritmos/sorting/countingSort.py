@@ -1,3 +1,4 @@
-def countingSort():
-    n = len(arr)
+def countingSort(A, B, K):
+    n = len(A)
+    
     
