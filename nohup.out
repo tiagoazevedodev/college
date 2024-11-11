@@ -158,3 +158,14 @@ remote:   https://github.com/tiagoazevedodev/college.git
 To https://github.com/tiagoazevedodev/Faculdade.git
    2aece88..56e605e  main -> main
 Mudanças locais detectadas. Fazendo commit e push...
+[main c5abea9] Auto-commit: 2024-11-11 13:43:05
+ 4 files changed, 8 insertions(+)
+ rename AED II/algoritmos/{ => sorting}/bucketSort.py (100%)
+ rename AED II/algoritmos/{ => sorting}/mergeSort.js (100%)
+ rename AED II/algoritmos/{ => sorting}/merge_sort.py (100%)
+Mudanças locais detectadas. Fazendo push...
+remote: This repository moved. Please use the new location:        
+remote:   https://github.com/tiagoazevedodev/college.git        
+To https://github.com/tiagoazevedodev/Faculdade.git
+   56e605e..c5abea9  main -> main
+Mudanças locais detectadas. Fazendo commit e push...
