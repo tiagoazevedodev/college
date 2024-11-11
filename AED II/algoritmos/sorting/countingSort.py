@@ -1,2 +1,3 @@
-def countingSort(arr):
-  
+def countingSort():
+    n = len(arr)
+    
